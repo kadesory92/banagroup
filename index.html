@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANA-GROUP - Technologie et Innovation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white p-4 fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo à gauche -->
+            <a href="#" class="text-2xl font-bold font-great-vibes">BANA-GROUP</a>
+
+            <!-- Liens centrés -->
+            <div class="hidden md:flex space-x-8 mx-auto">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="text-lg font-semibold hover:text-blue-300 transition duration-300 transform hover:scale-105">Accueil</a></li>
+                    <li class="relative group">
+                        <a href="#about" class="text-lg font-semibold hover:text-blue-300 transition duration-300 transform hover:scale-105">À Propos</a>
+                        <ul class="hidden group-hover:block absolute left-0 mt-2 bg-white text-blue-900 p-2 rounded shadow-lg">
+                            <li><a href="#history" class="block px-4 py-2 hover:text-blue-300">Notre Histoire</a></li>
+                            <li><a href="#team" class="block px-4 py-2 hover:text-blue-300">Notre Équipe</a></li>
+                            <li><a href="#values" class="block px-4 py-2 hover:text-blue-300">Nos Valeurs</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#services" class="text-lg font-semibold hover:text-blue-300 transition duration-300 transform hover:scale-105">Services</a>
+                        <ul class="hidden group-hover:block absolute left-0 mt-2 bg-white text-blue-900 p-2 rounded shadow-lg">
+                            <li><a href="#technology" class="block px-4 py-2 hover:text-blue-300">Technologie</a></li>
+                            <li><a href="#engineering" class="block px-4 py-2 hover:text-blue-300">Ingénierie</a></li>
+                            <li><a href="#construction" class="block px-4 py-2 hover:text-blue-300">Construction</a></li>
+                            <li><a href="#consulting" class="block px-4 py-2 hover:text-blue-300">Consulting</a></li>
+                            <li><a href="#security" class="block px-4 py-2 hover:text-blue-300">Sécurité</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#portfolio" class="text-lg font-semibold hover:text-blue-300 transition duration-300 transform hover:scale-105">Projets</a></li>
+                    <!-- <li><a href="#contact" class="text-lg font-semibold hover:text-blue-300 transition duration-300 transform hover:scale-105">Contact</a></li> -->
+                </ul>
+                <ul class="flex space-x-8">
+                    <li><a href="#rd" class="text-lg font-semibold hover:text-blue-300 transition duration-300 transform hover:scale-105">R&D</a></li>
+                    <li class="relative group">
+                        <a href="#resources" class="text-lg font-semibold hover:text-blue-300 transition duration-300 transform hover:scale-105">Ressources</a>
+                        <ul class="hidden group-hover:block absolute left-0 mt-2 bg-white text-blue-900 p-2 rounded shadow-lg">
+                            <li><a href="#news" class="block px-4 py-2 hover:text-blue-300">Actualités</a></li>
+                            <li><a href="#downloads" class="block px-4 py-2 hover:text-blue-300">Téléchargements</a></li>
+                            <li><a href="#faq" class="block px-4 py-2 hover:text-blue-300">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group">
+                        <a href="#community" class="text-lg font-semibold hover:text-blue-300 transition duration-300 transform hover:scale-105">Communauté</a>
+                        <ul class="hidden group-hover:block absolute left-0 mt-2 bg-white text-blue-900 p-2 rounded shadow-lg">
+                            <li><a href="#partnerships" class="block px-4 py-2 hover:text-blue-300">Partenariats</a></li>
+                            <li><a href="#events" class="block px-4 py-2 hover:text-blue-300">Événements</a></li>
+                            <li><a href="#client-portal" class="block px-4 py-2 hover:text-blue-300">Espace Client</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="#careers" class="text-lg font-semibold hover:text-blue-300 transition duration-300 transform hover:scale-105">Carrières</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Liens Connexion et Inscription à droite -->
+            <div class="hidden md:flex space-x-4">
+                <a href="#login" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">Connexion</a>
+                <a href="#signup" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">Inscription</a>
+            </div>
+
+            <!-- Menu Hamburger pour mobile -->
+            <button class="md:hidden text-white focus:outline-none" id="menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Menu mobile (caché par défaut) -->
+        <div class="md:hidden hidden mt-4" id="mobile-menu">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="#home" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">Accueil</a></li>
+                <li class="relative group">
+                    <a href="#about" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">À Propos</a>
+                    <ul class="hidden group-hover:block pl-4">
+                        <li><a href="#history" class="block px-4 py-2 hover:text-blue-300">Notre Histoire</a></li>
+                        <li><a href="#team" class="block px-4 py-2 hover:text-blue-300">Notre Équipe</a></li>
+                        <li><a href="#values" class="block px-4 py-2 hover:text-blue-300">Nos Valeurs</a></li>
+                    </ul>
+                </li>
+                <li class="relative group">
+                    <a href="#services" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">Services</a>
+                    <ul class="hidden group-hover:block pl-4">
+                        <li><a href="#technology" class="block px-4 py-2 hover:text-blue-300">Technologie</a></li>
+                        <li><a href="#engineering" class="block px-4 py-2 hover:text-blue-300">Ingénierie</a></li>
+                        <li><a href="#construction" class="block px-4 py-2 hover:text-blue-300">Construction</a></li>
+                        <li><a href="#consulting" class="block px-4 py-2 hover:text-blue-300">Consulting</a></li>
+                        <li><a href="#security" class="block px-4 py-2 hover:text-blue-300">Sécurité</a></li>
+                    </ul>
+                </li>
+                <li><a href="#portfolio" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">Projets</a></li>
+                <li><a href="#contact" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">Contact</a></li>
+                <li><a href="#rd" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">R&D</a></li>
+                <li class="relative group">
+                    <a href="#resources" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">Ressources</a>
+                    <ul class="hidden group-hover:block pl-4">
+                        <li><a href="#news" class="block px-4 py-2 hover:text-blue-300">Actualités</a></li>
+                        <li><a href="#downloads" class="block px-4 py-2 hover:text-blue-300">Téléchargements</a></li>
+                        <li><a href="#faq" class="block px-4 py-2 hover:text-blue-300">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="relative group">
+                    <a href="#community" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">Communauté</a>
+                    <ul class="hidden group-hover:block pl-4">
+                        <li><a href="#partnerships" class="block px-4 py-2 hover:text-blue-300">Partenariats</a></li>
+                        <li><a href="#events" class="block px-4 py-2 hover:text-blue-300">Événements</a></li>
+                        <li><a href="#client-portal" class="block px-4 py-2 hover:text-blue-300">Espace Client</a></li>
+                    </ul>
+                </li>
+                <li><a href="#careers" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">Carrières</a></li>
+                <li><a href="#login" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">Connexion</a></li>
+                <li><a href="#signup" class="block text-lg font-semibold hover:text-blue-300 transition duration-300">Inscription</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Slider -->
+        <div class="slider-container absolute inset-0 w-full">
+            <div id="slider-track" class="slider-track flex transition-transform duration-700 ease-in-out">
+                <div class="slider-slide w-full h-screen flex-shrink-0">
+                    <img src="./images/photo1.jpg" alt="Slide 1" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-slide w-full h-screen flex-shrink-0">
+                    <img src="./images/photo2.jpg" alt="Slide 2" class="w-full h-full object-cover">
+                </div>
+                <div class="slider-slide w-full h-screen flex-shrink-0">
+                    <img src="./images/photo3.jpg" alt="Slide 3" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenu du Header avec texte défilant -->
+        <div class="absolute inset-0 flex items-center justify-center z-10">
+            <div class="text-center text-white px-4 w-full max-w-4xl mx-auto bg-black bg-opacity-50 backdrop-blur-sm py-8 rounded-lg">
+                <h1 class="text-5xl font-bold font-great-vibes">BANA-GROUP</h1>
+                <strong>
+                    <h4 class="relative inline-block">
+                        <span class="absolute top-0 left-0 w-full h-0.5 bg-blue-600"></span>
+                        Base d'Accès aux Numériques Avancées
+                    </h4>
+                </strong>
+                <!-- Conteneur pour le texte défilant -->
+                <div class="mt-4 text-xl h-12 overflow-hidden relative">
+                    <div id="text-carousel" class="absolute w-full transition-transform duration-1000 ease-in-out">
+                        <p class="text-slide">Innovation, Technologie, et Excellence</p>
+                        <p class="text-slide">Des solutions sur mesure pour votre entreprise</p>
+                        <p class="text-slide">Engagés pour un avenir durable</p>
+                        <p class="text-slide">Votre partenaire de confiance</p>
+                    </div>
+                </div>
+                <a href="#about" class="mt-8 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">En savoir plus</a>
+                <a href="#contact" class="mt-8 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Contactez Nous</a>
+            </div>
+        </div>
+
+        <!-- Contrôles du Slider -->
+        <button id="slider-prev" class="slider-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">&#10094;</button>
+        <button id="slider-next" class="slider-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">&#10095;</button>
+    </header>
+
+    <!-- Section À Propos -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">À Propos de Nous</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Bloc Notre Histoire -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-blue-600">
+                    <h3 class="text-2xl font-bold mb-6">Notre Histoire</h3>
+                    <p class="text-gray-700">
+                        Fondé en 2005, BANA-GROUP est né de la vision de révolutionner l'industrie technologique en Afrique.
+                        Depuis nos débuts, nous nous sommes engagés à fournir des solutions innovantes et adaptées aux besoins
+                        locaux tout en répondant aux standards internationaux.
+                    </p>
+                    <p class="mt-4 text-gray-700">
+                        Notre parcours est marqué par des projets phares qui ont transformé des secteurs clés tels que
+                        l'énergie, les télécommunications et la finance. Nous croyons en une technologie inclusive et durable.
+                    </p>
+                    <ul class="mt-4 list-disc list-inside text-gray-700">
+                        <li>2005 : Création de BANA-GROUP à Dakar, Sénégal.</li>
+                        <li>2010 : Lancement de notre premier projet international.</li>
+                        <li>2020 : Expansion dans 10 pays africains.</li>
+                    </ul>
+                </div>
+
+                <!-- Bloc Notre Équipe -->
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-green-600">
+                    <h3 class="text-2xl font-bold mb-6">Notre Équipe</h3>
+                    <p class="text-gray-700">
+                        Notre équipe est composée de plus de 200 experts passionnés par l'innovation et la technologie.
+                        Nous croyons en la diversité des compétences et des perspectives pour offrir des solutions créatives
+                        et efficaces.
+                    </p>
+                    <p class="mt-4 text-gray-700">
+                        Chaque membre de notre équipe apporte une expertise unique, qu'il s'agisse d'ingénierie, de développement
+                        logiciel, de gestion de projet ou de stratégie d'entreprise.
+                    </p>
+                    <ul class="mt-4 list-disc list-inside text-gray-700">
+                        <li>Ingénieurs certifiés avec plus de 10 ans d'expérience.</li>
+                        <li>Développeurs spécialisés dans les technologies émergentes.</li>
+                        <li>Consultants stratégiques pour les entreprises innovantes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Nos Services</h2>
+            <div id="services-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Technologie -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center cursor-pointer hover:shadow-xl transition-shadow" data-link="/services/technologie">
+                    <i class="fas fa-laptop-code text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold">Technologie</h3>
+                    <p class="mt-4">Nous offrons des solutions technologiques de pointe pour répondre à vos besoins.</p>
+                </div>
+
+                <!-- Service Ingénierie -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center cursor-pointer hover:shadow-xl transition-shadow" data-link="/services/ingenierie">
+                    <i class="fas fa-cogs text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold">Ingénierie</h3>
+                    <p class="mt-4">Nos services d'ingénierie couvrent un large éventail de disciplines.</p>
+                </div>
+
+                <!-- Service Construction -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center cursor-pointer hover:shadow-xl transition-shadow" data-link="/services/construction">
+                    <i class="fas fa-hard-hat text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold">Construction</h3>
+                    <p class="mt-4">Nous réalisons des projets de construction innovants et durables.</p>
+                </div>
+
+                <!-- Service Consulting -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center cursor-pointer hover:shadow-xl transition-shadow" data-link="/services/consulting">
+                    <i class="fas fa-chart-line text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold">Consulting</h3>
+                    <p class="mt-4">Nos experts vous accompagnent dans vos projets stratégiques.</p>
+                </div>
+
+                <!-- Service Sécurité -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center cursor-pointer hover:shadow-xl transition-shadow" data-link="/services/securite">
+                    <i class="fas fa-shield-alt text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold">Sécurité</h3>
+                    <p class="mt-4">Nous fournissons des solutions de sécurité sur mesure pour protéger vos actifs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Nos Valeurs -->
+    <section id="values" class="py-20 bg-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Valeurs</h2>
+            <div class="carousel-container relative overflow-hidden">
+                <div class="carousel-track flex transition-transform duration-500 ease-in-out">
+                    <!-- Intégrité -->
+                    <div class="carousel-slide w-full flex-shrink-0 p-4">
+                        <div class="bg-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col items-center justify-center">
+                            <i class="fas fa-hand-holding-heart text-5xl text-blue-600 mb-6"></i>
+                            <h3 class="text-2xl font-bold">Intégrité</h3>
+                            <p class="mt-4 text-gray-700">
+                                Nous agissons avec honnêteté et transparence dans toutes nos interactions.
+                                L'intégrité est au cœur de notre culture d'entreprise et guide chacune de nos décisions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Innovation -->
+                    <div class="carousel-slide w-full flex-shrink-0 p-4">
+                        <div class="bg-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col items-center justify-center">
+                            <i class="fas fa-lightbulb text-5xl text-blue-600 mb-6"></i>
+                            <h3 class="text-2xl font-bold">Innovation</h3>
+                            <p class="mt-4 text-gray-700">
+                                Nous croyons en une approche innovante pour résoudre les défis complexes.
+                                Notre équipe explore constamment de nouvelles technologies et méthodologies pour rester à la pointe de l'industrie.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Collaboration -->
+                    <div class="carousel-slide w-full flex-shrink-0 p-4">
+                        <div class="bg-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col items-center justify-center">
+                            <i class="fas fa-users text-5xl text-blue-600 mb-6"></i>
+                            <h3 class="text-2xl font-bold">Collaboration</h3>
+                            <p class="mt-4 text-gray-700">
+                                Nous travaillons en étroite collaboration avec nos clients et partenaires pour atteindre des résultats exceptionnels.
+                                Notre approche collaborative garantit que chaque projet est aligné sur les objectifs et les valeurs de nos partenaires.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Durabilité -->
+                    <div class="carousel-slide w-full flex-shrink-0 p-4">
+                        <div class="bg-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col items-center justify-center">
+                            <i class="fas fa-leaf text-5xl text-blue-600 mb-6"></i>
+                            <h3 class="text-2xl font-bold">Durabilité</h3>
+                            <p class="mt-4 text-gray-700">
+                                Nous nous engageons à promouvoir des pratiques respectueuses de l'environnement dans tous nos projets.
+                                De la conception à la réalisation, nous intégrons des solutions écologiques pour minimiser notre impact sur la planète.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Excellence -->
+                    <div class="carousel-slide w-full flex-shrink-0 p-4">
+                        <div class="bg-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col items-center justify-center">
+                            <i class="fas fa-award text-5xl text-blue-600 mb-6"></i>
+                            <h3 class="text-2xl font-bold">Excellence</h3>
+                            <p class="mt-4 text-gray-700">
+                                Nous visons l'excellence dans tout ce que nous entreprenons.
+                                Que ce soit dans la qualité de nos services ou dans la satisfaction de nos clients, nous nous efforçons de dépasser les attentes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contrôles du Carrousel -->
+                <button class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">&#10094;</button>
+                <button class="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Portfolio Dynamique -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Nos Projets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="portfolio-item bg-gray-200 p-4 rounded-lg">
+                    <img src="./images/image1.jpeg" alt="Projet 1" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-xl font-bold mt-4">Projet Technologique</h3>
+                    <p class="mt-2">Description du projet technologique réalisé par BANA-GROUP.</p>
+                </div>
+                <div class="portfolio-item bg-gray-200 p-4 rounded-lg">
+                    <img src="./images/image1.jpeg" alt="Projet 2" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-xl font-bold mt-4">Projet d'Ingénierie</h3>
+                    <p class="mt-2">Description du projet d'ingénierie réalisé par BANA-GROUP.</p>
+                </div>
+                <div class="portfolio-item bg-gray-200 p-4 rounded-lg">
+                    <img src="./images/image1.jpeg" alt="Projet 3" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-xl font-bold mt-4">Projet de Construction</h3>
+                    <p class="mt-2">Description du projet de construction réalisé par BANA-GROUP.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Recherche et Innovation -->
+    <section id="rd" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Recherche et Innovation</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Articles et Publications</h3>
+                    <p class="text-gray-700">Découvrez nos dernières recherches et publications dans le domaine de la technologie et de l'ingénierie.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Projets en Cours</h3>
+                    <p class="text-gray-700">Nous travaillons sur plusieurs projets innovants qui façonneront l'avenir de l'industrie.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Partenariats</h3>
+                    <p class="text-gray-700">Nous collaborons avec des universités et des centres de recherche pour développer des solutions de pointe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Actualités et Blog -->
+    <section id="news" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Actualités et Blog</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Technologie</h3>
+                    <p class="text-gray-700">Les dernières tendances et innovations dans le domaine de la technologie.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Ingénierie</h3>
+                    <p class="text-gray-700">Actualités et analyses sur les avancées en ingénierie.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Construction</h3>
+                    <p class="text-gray-700">Découvrez les derniers projets et innovations dans le domaine de la construction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Carrières -->
+    <section id="careers" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Carrières</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Offres d'Emploi</h3>
+                    <p class="text-gray-700">Consultez nos offres d'emploi et rejoignez notre équipe dynamique.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Stages</h3>
+                    <p class="text-gray-700">Nous offrons des opportunités de stage pour les étudiants passionnés par la technologie et l'ingénierie.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Culture d'Entreprise</h3>
+                    <p class="text-gray-700">Découvrez notre culture d'entreprise et les avantages de travailler chez BANA-GROUP.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Partenariats et Collaborations -->
+    <section id="partnerships" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Partenariats et Collaborations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Partenaires Stratégiques</h3>
+                    <p class="text-gray-700">Nos partenaires stratégiques qui nous aident à réaliser des projets innovants.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Collaborations</h3>
+                    <p class="text-gray-700">Nos collaborations avec des entreprises et des institutions de renom.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Projets Conjoints</h3>
+                    <p class="text-gray-700">Découvrez les projets que nous avons réalisés en collaboration avec nos partenaires.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Espace Client -->
+    <section id="client-portal" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Espace Client</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-700">Connectez-vous à votre espace client pour suivre vos projets, accéder à des documents et communiquer avec notre équipe.</p>
+                <a href="#login" class="mt-4 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Connexion</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ et Support -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">FAQ et Support</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Questions Fréquentes</h3>
+                    <p class="text-gray-700">Trouvez des réponses aux questions les plus fréquentes sur nos services et produits.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Support Technique</h3>
+                    <p class="text-gray-700">Contactez notre équipe de support pour obtenir de l'aide sur vos projets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Événements et Conférences -->
+    <section id="events" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Événements et Conférences</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Calendrier des Événements</h3>
+                    <p class="text-gray-700">Consultez notre calendrier des événements à venir.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Inscription</h3>
+                    <p class="text-gray-700">Inscrivez-vous à nos événements et conférences.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Galerie</h3>
+                    <p class="text-gray-700">Découvrez les photos et vidéos de nos événements passés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Téléchargements -->
+    <section id="downloads" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Téléchargements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Brochures</h3>
+                    <p class="text-gray-700">Téléchargez nos brochures pour en savoir plus sur nos services et produits.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Rapports</h3>
+                    <p class="text-gray-700">Consultez nos rapports détaillés sur nos projets et recherches.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Logiciels</h3>
+                    <p class="text-gray-700">Téléchargez nos logiciels et outils pour vos projets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Politique de Confidentialité et CGU -->
+    <section id="privacy" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Politique de Confidentialité et CGU</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-700">Consultez notre politique de confidentialité et nos conditions générales d'utilisation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Multilingue -->
+    <section id="language" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Sélection de la Langue</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-700">Sélectionnez votre langue préférée pour naviguer sur notre site.</p>
+                <select class="mt-4 p-2 rounded-lg border-gray-300">
+                    <option value="fr">Français</option>
+                    <option value="en">Anglais</option>
+                    <!-- Ajoutez d'autres langues si nécessaire -->
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Accessibilité -->
+    <section id="accessibility" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Accessibilité</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-700">Nous nous engageons à rendre notre site accessible à tous. Découvrez nos options d'accessibilité.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réseaux Sociaux -->
+    <section id="social" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Réseaux Sociaux</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-700">Suivez-nous sur les réseaux sociaux pour rester informé de nos dernières actualités.</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="#" class="text-gray-700 hover:text-blue-600"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Newsletter -->
+    <section id="newsletter" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Newsletter</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-700">Abonnez-vous à notre newsletter pour recevoir les dernières actualités et offres.</p>
+                <form class="mt-4 flex">
+                    <input type="email" placeholder="Votre email" class="flex-1 p-2 rounded-l-lg border-gray-300">
+                    <button type="submit" class="bg-blue-600 text-white p-2 rounded-r-lg hover:bg-blue-700 transition duration-300">
+                        S'abonner
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Plan du Site -->
+    <section id="sitemap" class="py-16 bg-white">
+        <div class="container block-center mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Plan du Site</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li><a href="#home" class="hover:text-blue-600">Accueil</a></li>
+                        <li><a href="#about" class="hover:text-blue-600">À Propos</a></li>
+                        <li><a href="#services" class="hover:text-blue-600">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-blue-600">Projets</a></li>
+                        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+                        <li><a href="#rd" class="hover:text-blue-600">R&D</a></li>
+                    </ul>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li><a href="#news" class="hover:text-blue-600">Actualités</a></li>
+                        <li><a href="#careers" class="hover:text-blue-600">Carrières</a></li>
+                        <li><a href="#partnerships" class="hover:text-blue-600">Partenariats</a></li>
+                        <li><a href="#client-portal" class="hover:text-blue-600">Espace Client</a></li>
+                        <li><a href="#faq" class="hover:text-blue-600">FAQ</a></li>
+                        <li><a href="#events" class="hover:text-blue-600">Événements</a></li>
+                    </ul>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li><a href="#downloads" class="hover:text-blue-600">Téléchargements</a></li>
+                        <li><a href="#privacy" class="hover:text-blue-600">Politique de Confidentialité et CGU</a></li>
+                        <li><a href="#language" class="hover:text-blue-600">Multilingue</a></li>
+                        <li><a href="#accessibility" class="hover:text-blue-600">Accessibilité</a></li>
+                        <li><a href="#social" class="hover:text-blue-600">Réseaux Sociaux</a></li>
+                        <li><a href="#newsletter" class="hover:text-blue-600">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Recherche -->
+    <section id="search" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Recherche</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <input type="text" placeholder="Rechercher..." class="w-full p-2 rounded-lg border-gray-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Contactez-Nous</h2>
+            <form class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
+                    <input type="text" id="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Section À propos -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">À Propos de Nous</h3>
+                    <p class="text-gray-300">
+                        BANA-GROUP est une entreprise innovante spécialisée dans la technologie, l'ingénierie et la construction. Nous nous engageons à fournir des solutions de qualité pour répondre aux besoins de nos clients.
+                    </p>
+                </div>
+
+                <!-- Liens rapides -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens Rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-blue-300">Accueil</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-blue-300">À Propos</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-blue-300">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-300 hover:text-blue-300">Projets</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-blue-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Informations de contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contactez-Nous</h3>
+                    <ul class="text-gray-300 space-y-2">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Rue de l'Innovation, Ville, Pays</li>
+                        <li><i class="fas fa-phone mr-2"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> contact@banagroup.com</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">
+                        Abonnez-vous à notre newsletter pour recevoir les dernières actualités et offres.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email" class="flex-1 p-2 rounded-l-lg text-gray-900">
+                        <button type="submit" class="bg-blue-600 text-white p-2 rounded-r-lg hover:bg-blue-700 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center">
+                <h3 class="text-xl font-bold mb-4">Suivez-Nous</h3>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-blue-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-blue-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-blue-300"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-blue-300"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Droits d'auteur -->
+            <div class="mt-8 text-center text-gray-300">
+                <p>&copy; 2023 BANA-GROUP. Tous droits réservés.</p>
+                <div class="mt-2">
+                    <a href="#" class="mx-2 hover:text-blue-300">Politique de Confidentialité</a>
+                    <a href="#" class="mx-2 hover:text-blue-300">Conditions d'Utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
